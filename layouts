@@ -1,0 +1,27 @@
+nuxt.layouts 
+
+defauls 
+<template>
+    <div>
+        <NavBar/>
+        <slot />
+    </div>
+</template>
+
+custom 
+<template> 
+<div>
+    <NavBar/>
+    <div class="pt-10">
+        <slot />
+    </div>
+</div>
+    
+</template>
+
+app.vue 
+<template>
+  <NuxtLayout>
+    <NuxtPage/>
+  </NuxtLayout>
+</template>
