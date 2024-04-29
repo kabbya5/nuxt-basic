@@ -1,0 +1,21 @@
+//root error.vue 
+<template> 
+<div class="flex h-screen justify-center items-center flex-col">
+    <h class="text-9xl">
+        {{ error.statusCode }}
+    </h>
+    <p class="mt-6 text-4xl">
+        {{error.message}}
+    </p>
+
+    <button @click="handelError" class="rounded mt-7 bg-blue-700 px-7 py-4 text-white"> Go Back </button>
+</div>
+</template>
+
+<script setup>
+    const error = useError();
+
+    const handelError = () => {
+       navigateTo("/"); 
+    }
+</script> 
