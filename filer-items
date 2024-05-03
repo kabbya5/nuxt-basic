@@ -1,0 +1,30 @@
+// rooot data cars.json 
+ // composable useCars.js  
+
+import cars from "@/data/cars.json";
+
+export const useCars = () => {
+    return {
+        cars,
+    };
+};
+
+/ / get car by id in view file  
+
+const car = computed(() => {
+        return cars.find((c) =>{
+            return c.id === parseInt(route.params.id);
+        })
+});
+
+
+
+
+In Vue.js, computed properties are a fundamental feature that offer several advantages:
+
+Reactivity: Computed properties are reactive. This means that Vue automatically tracks their dependencies during the render, and when any of these dependencies change, the computed property is re-evaluated. This makes them perfect for dynamically updating data based on changes in your application state.
+Caching: Computed properties cache their values based on their dependencies. This means that if the dependencies haven't changed, the computed property won't be re-evaluated and will return the cached value instead. This can significantly improve the performance of your application, especially for complex computations.
+Readability: Computed properties help in organizing your code by separating complex logic from your template. This makes your templates cleaner and more readable, as you can directly reference computed properties instead of having complex expressions directly in your template.
+Code Reusability: Computed properties allow you to reuse logic across your application. Once defined, computed properties can be accessed from any component, making it easy to share common computations between different parts of your application.
+Testing: Computed properties make your code easier to test. Since they are pure functions (i.e., they only depend on their input), you can easily write unit tests to verify their behavior. This promotes better test coverage and overall code quality.
+Performance Optimization: By using computed properties strategically, you can optimize the performance of your Vue.js application. Since computed properties are cached and only re-evaluated when their dependencies change, you can avoid unnecessary re-renders and improve the overall responsiveness of your UI.
