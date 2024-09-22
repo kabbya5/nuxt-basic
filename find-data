@@ -1,0 +1,29 @@
+<script setup lang="ts">
+    import menus from "@/data/menuItems.json";
+    const route = useRoute();
+    const menuName = route.params.menu;
+    const allItems = menus.flatMap(menu => menu.items);
+    const menu = allItems.find(item => item.name === menuName);
+</script>
+
+ {
+        "menuType": "Main Courses",
+        "items": [
+            {
+                "id": 1,
+                "name": "Spaghetti Carbonara",
+                "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKZvB0-nxlVvA6OOCc91vBme8YnyRhGOcLuw&s"
+            },
+            {
+                "id": 2,
+                "name": "Chicken Alfredo",
+                "image_url": "https://www.budgetbytes.com/wp-content/uploads/2022/07/Chicken-Alfredo-above.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Margherita Pizza",
+                "image_url": "https://www.allrecipes.com/thmb/dA8YLuNy2HMa9s-tSTiFYjPdXy0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/5225433-four-cheese-margherita-pizza-Christina-4x3-1-29b0fe4316b74017a5ae437e9ebb319d.jpg"
+            }
+        ]
+    },
+
