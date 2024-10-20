@@ -1,0 +1,16 @@
+// Template 
+
+<template>
+  <div>
+    <h3>The Factorial of 10 is : {{ calculateFactorial(10) }}</h3>
+  </div>
+</template>
+
+utils/ts.file
+export function calculateFactorial($n: number): number {
+  if ($n === 1 || $n === 0) {
+    return 1;
+  }
+
+  return $n * calculateFactorial($n - 1);
+}
