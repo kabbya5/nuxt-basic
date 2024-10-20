@@ -14,3 +14,19 @@ export function calculateFactorial($n: number): number {
 
   return $n * calculateFactorial($n - 1);
 }
+
+export function calculateFactorial($n: number): number {
+  if ($n === 1 || $n === 0) {
+    return 1;
+  }
+
+  return $n * calculateFactorial($n - 1);
+}
+
+
+export function fibonacciSerize($n :number) : number{
+  if($n <= 1){
+    return $n
+  }
+  return fibonacciSerize($n - 1) + fibonacciSerize($n - 2);
+}
